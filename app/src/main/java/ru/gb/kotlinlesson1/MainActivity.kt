@@ -11,9 +11,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val data = Employee("Ivan", "Engineer")
+
         val buttonExample = findViewById<Button>(R.id.button) as Button
         buttonExample.setOnClickListener {
-            Toast.makeText(this, "Test Click", Toast.LENGTH_SHORT).show()
+            Toast.makeText(
+                this,
+                "Name: ${data.Name}, Position: ${data.Position}",
+                Toast.LENGTH_SHORT
+            ).show()
         }
 
     }
